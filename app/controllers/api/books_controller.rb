@@ -31,6 +31,7 @@ end
 def destroy
   @book = Book.find_by(id: params[:id])
   @book.destroy
+  render json: { message: "Book has been successfully destroyed." }
 end
 
 
